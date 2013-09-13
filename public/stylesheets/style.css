@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.block {
+	width: 			45%;
+	min-width: 		300px;
+	display: 		inline-block;
+}
+
+.error {
+	color: red
+}
+
+.success {
+	color: green;
+}

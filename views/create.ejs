@@ -1,21 +1,22 @@
-<% var title = 'Authentication Example' %>
-<% include head %>
 
-<h1>Sign up</h1>
-<%- message %>
-Create a new user
-<form method="post" action="/create">
-  <p>
-    <label>Username:</label>
-    <input type="text" name="username">
-  </p>
-  <p>
-    <label>Password:</label>
-    <input type="password" name="password">
-  </p>
-  <p>
-    <input type="submit" value="Sign up">
-  </p>
-</form>
+<% var title = 'Authentication Example' %>
+<% var custom_styles = '/stylesheets/signin.css' %>
+<% include head %>
+<div class="message"><%- message %></div>
+
+  <div class="container">
+
+    <form class="form-signin" method="post" action="/create">
+      <h2 class="form-signin-heading">Create an account</h2>
+      <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+      <input type="password" class="form-control" name="password" placeholder="Password">
+      <label>
+        <a href="/login">Already have an account?</a>
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    </form>
+
+  </div> <!-- /container -->
+
 
 <% include foot %>

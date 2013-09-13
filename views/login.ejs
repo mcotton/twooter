@@ -1,49 +1,24 @@
+
+
 <% var title = 'Authentication Example' %>
+<% var custom_styles = '/stylesheets/signin.css' %>
 <% include head %>
 <div class="message"><%- message %></div>
 
-<span class="block">
-<h1>Login</h1>
-Username and Password
-<form method="post" action="/login">
-  <p>
-    <label>Username:</label>
-    <input type="text" name="username">
-  </p>
-  <p>
-    <label>Password:</label>
-    <input type="password" name="password">
-  </p>
-  <p>
-    <input type="submit" value="Login">
-  </p>
-</form>
-</span>
+  <div class="container">
 
-<span class="block">
-<h1>Sign up</h1>
-Create a new user
-<form method="post" action="/create">
-  <p>
-    <label>First Name:</label>
-    <input type="text" name="firstname">
-  </p>
-  <p>
-    <label>Last name:</label>
-    <input type="text" name="lastname">
-  </p>
-  <p>
-    <label>Username:</label>
-    <input type="text" name="username">
-  </p>
-  <p>
-    <label>Password:</label>
-    <input type="password" name="password">
-  </p>
-  <p>
-    <input type="submit" value="Sign up">
-  </p>
-</form>
-</span>
+    <form class="form-signin" method="post" action="/login">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+      <input type="password" class="form-control" name="password" placeholder="Password">
+      <label>
+        <a href="/create">Sign up for an account</a>
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+  </div> <!-- /container -->
+
 
 <% include foot %>
+
